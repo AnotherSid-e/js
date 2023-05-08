@@ -6,56 +6,100 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 </head>
 <body>
-  <h1 class="h1" style="
-    text-align: center;
-    margin: 70px 0 70px;">
-
-    Практика JavaScript
-  </h1>
-  <section class="tab-main">
-    <div class="container">
-      <div class="tabs">
+  <div class="wraper">
+    <h1 class="h1" style="
+        text-align: center;
+        margin: 70px 0 70px;">
+    
+      Практика JavaScript
+    </h1>
+    <section class="tabs">
+      <div class="container">
         <div class="tabs-inner">
           <div class="tabs-item is-active" data="tab-1">1</div>
-          <div class="tabs-item"           data="tab-2">2</div>
-          <div class="tabs-item"           data="tab-3">3</div>
+          <div class="tabs-item" data="tab-2">2</div>
+          <div class="tabs-item" data="tab-3">3</div>
         </div>
         <div class="tabs__content">
           <div class="tab tab-1 is-active">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, molestiae.
           </div>
           <div class="tab tab-2">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor laudantium minima eligendi consequatur, temporibus excepturi nulla amet dolores rem esse.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo eaque necessitatibus ea rem.
           </div>
           <div class="tab tab-3">
             Lorem ipsum dolor sit amet.
           </div>
         </div>
       </div>
-    </div>
-  </section>
-  <section class="accord-main">
-    <div class="container">
-      <div class="accord">
+    </section>
+    <section class="accord">
+      <div class="container">
         <div class="accord-inner">
           <button class="accord-item" data="acc-1">1
-            <p class="acc-1 accord-none accord__content">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum, ducimus consequuntur! Recusandae magni expedita iure doloribus eveniet, consequuntur in placeat voluptas cumque nostrum voluptatem aperiam quam veritatis amet, voluptate obcaecati!</p>
+            <p class="acc-1 accord-none accord__content">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Voluptatum, ducimus consequuntur! Recusandae magni expedita iure doloribus eveniet, consequuntur in placeat
+              voluptas cumque nostrum voluptatem aperiam quam veritatis amet, voluptate obcaecati!</p>
           </button>
           <button class="accord-item" data="acc-2">2
-            <p class="acc-2 accord-none accord__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse corrupti provident obcaecati laborum ducimus ex rem consequatur deserunt nam sit?</p>
+            <p class="acc-2 accord-none accord__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
+              corrupti provident obcaecati laborum ducimus ex rem consequatur deserunt nam sit?</p>
           </button>
           <button class="accord-item" data="acc-3">3
-            <p class="acc-3 accord-none accord__content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia accusamus incidunt vitae placeat totam blanditiis quasi tempora minima recusandae a commodi ipsum perferendis asperiores libero eos natus deleniti provident itaque cupiditate, dolore inventore quo soluta. Quas, non nisi. Voluptatibus voluptas deleniti aliquid placeat autem quibusdam nobis numquam ab possimus fugiat rem neque expedita ipsum ipsam aperiam, sit perspiciatis minima, hic porro officia dolores pariatur eaque repudiandae! Sed suscipit repudiandae quasi.</p>
+            <p class="acc-3 accord-none accord__content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia
+              accusamus incidunt vitae placeat totam blanditiis quasi tempora minima recusandae a commodi ipsum perferendis
+              asperiores libero eos natus deleniti provident itaque cupiditate, dolore inventore quo soluta. Quas, non nisi.
+              Voluptatibus voluptas deleniti aliquid placeat autem quibusdam nobis numquam ab possimus fugiat rem neque
+              expedita ipsum ipsam aperiam, sit perspiciatis minima, hic porro officia dolores pariatur eaque repudiandae!
+              Sed suscipit repudiandae quasi.</p>
           </button>
         </div>
       </div>
-    </div>
-  </section>
-  <section class="modal">
+    </section>
+    <div class="modal-bg is-off"></div>
+      <section class="modal">
+        <div class="container">
+          <div class="modal-inner">
+            <div class="modal-item-btn" data="modal__content-1" style="background-color: #962bed;">1</div>
+            <div class="modal-item-btn" data="modal__content-2" style="background-color: #ffffff;">Мяу</div>
+          </div>
+        </div>
+      </section>
+      
+      <div class="modal__content modal__content-1 is-off">
+        <button class="modal-close modal-close__btn modal-close__btn--1"></button>
+        <form class="modal__form">
+          <div class="input-inner">
+            <input class="input-item" type="text" class="form-input" placeholder="Имя пользователя">
+            <input class="input-item" type="email" class="form-input" placeholder="Почта">
+            <input class="input-item" type="password" class="form-input" placeholder="Пароль">
+          </div>
+          <button class="form-btn">Войти</button>
+        </form>
+      </div>
+      <div class="modal__content modal__content-2 is-off">
+        <button class="modal-close modal-close__btn"></button>
+        <div class="swiper swiper__cat">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img class="swiper-img" src="images/ZGQHxE_oYOw.jpg" alt=""></div>
+            <div class="swiper-slide"><img class="swiper-img" src="images/VuVtK2b0k2w.jpg" alt=""></div>
+            <div class="swiper-slide"><img class="swiper-img" src="images/WtdhiBM7mbM.jpg" alt=""></div>
+            <div class="swiper-slide"><img class="swiper-img" src="images/FGCux4sSUzc.jpg" alt=""></div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+      </div>
 
-  </section>
+  </div>
+  
   <script src="js/main.min.js"></script>
 </body>
 </html>
+
+

@@ -1,26 +1,22 @@
 'use strict'
 
-//let inputIn = document.querySelector('.input-in');
-
-// const button1 = document.querySelector('.btn-1');
-// const input1  = document.querySelector('.age');
-// const h1 = document.querySelector('.h1')
-
-// input1.oninput = () => {
-//   console.log(input1.value);
-//   document.querySelector('#span').innerHTML = input1.value;
-//   input
-// }
-
-// let i1    = document.querySelector('.i-1'),
-//     i2    = document.querySelector('.i-2'),
-//     out1  = document.querySelector('.out-1'),
-//     b1    = document.querySelector('.b-1');
-
-// b1.onclick = function() {
-//   this.classList.toggle('b1--act')
-// }
-
+var swiper = new Swiper(".swiper__cat", {
+  spaceBetween: 30,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  mousewheel: {
+    sensitivity: 55,
+    EventTarget: '.swiper-img'
+  },
+  touchRatio: 2,
+  keyboard: true,
+  autoHeight: true,
+  centeredSlides: true,
+  speed: 800,
+  spaceBetween: 0,
+});
 
 let tab = function() {
   let   tabNav     = document.querySelectorAll('.tabs-item'),
@@ -59,7 +55,6 @@ let acc = function() {
   });
   function accF() {
     accName = this.getAttribute('data');
-    console.log(accName);
     startAcc(accName);
   };
   function startAcc(accName) {
@@ -71,3 +66,36 @@ let acc = function() {
     }
 };
 acc();
+
+function modal(){
+  let modalNav = document.querySelectorAll('.modal__content'),
+      modalBackGround = document.querySelector('.modal-bg'),
+      modalOpenBtn = document.querySelectorAll('.modal-item-btn'),
+      modalCloseBtn = document.querySelectorAll('.modal-close'),
+      modalName;
+  modalOpenBtn.forEach(item => {
+    item.addEventListener('click', mdAct)
+  });
+  function mdAct() {
+    modalName = this.getAttribute('data');
+    mdOpenW(modalName);
+  }
+  function mdOpenW(modalName) {
+    modalNav.forEach(item => {
+      if (item.classList.contains(modalName)) {
+        item.classList.remove('is-off')
+        modalBackGround.classList.remove('is-off')
+      }
+      modalCloseBtn.forEach(item => {
+        item.addEventListener('click', mdClose);
+      function mdClose(){
+        modalNav.forEach(item => {
+          item.classList.add('is-off');
+          modalBackGround.classList.add('is-off')
+        })
+      }
+      })
+    })
+  }
+}
+modal();
